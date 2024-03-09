@@ -1,0 +1,42 @@
+<% layout("/layouts/boilerplate") %>
+
+<div class="row">
+    <div class="col-5 offset-3">  <!--space from the left-->
+        
+        <h3>Create a new Destination</h3>
+        <form action="/listings" method="post" class="needs-validation" novalidate >
+            <div class="mb-3">
+                <label for="title" class="form-label">Title:</label>
+                <input type="text" name="listing[title]"  class="form-control" required>
+                <div class="valid-feedback">Looks good!</div>
+            </div>
+            <div class="mb-3">
+                <label for="description" class="form-label">Description:</label>
+                <textarea name="listing[description]" class="form-control" required></textarea>
+                <div class="invalid-feedback">please enter short disc..!!</div>
+            </div>
+            <div class="mb-3">
+                <label for="image" class="form-label">Image-Link:</label>
+                <input name="listing[image]"  type="text" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label for="price" class="form-label">Price:</label>
+                <input name="listing[price]"  type="text" class="form-control" required>
+                <div class="invalid-feedback">Price should be valid!!</div>
+            </div>
+            <div class="row">
+            <div class="mb-3 col-md-8">
+                <label for="location" class="form-label">Location:</label>
+                <input name="listing[location]"  type="text" class="form-control" required>
+                <div class="invalid-feedback">location should be valid!!</div>
+                
+            </div>
+            <div class="mb-3 col-md-4">    <!--total:12-->
+                <label for="country" class="form-label">Country:</label>
+                <input name="listing[country]"  type="text" class="form-control">
+            </div>
+        </div>
+            <button class="btn btn-dark add-btn">Add</button>
+        </form>
+    </div>
+</div>
